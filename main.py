@@ -25,8 +25,21 @@ try:
    
 except ValueError:
  print("invalid price")
- 
- 
+products=[] 
+product = {"name":product_name,
+            "Sku": sku,
+            "price":price,
+            "quantity":quantity
+ }
+for existing_product in products:
+  if existing_product["sku"]==sku:
+    print("sku already exists")
+    break
+else:
+  print("sku is available to add")
+  products.append(product)
+
+
 
 
 
