@@ -40,6 +40,17 @@ else:
   products.append(product)
 
 
+import psycopg
+conn = psycopg.connect(
+    host="localhost",
+    dbname="postgres",
+    user="postgres",
+    password="Mahmoudkom@1",
+    port=5432
+)
 
-
+print("Connected to PostgreSQL!")
+cursor= conn.cursor()
+print ("cursor created sucsessfully")
+conn.close()
 
